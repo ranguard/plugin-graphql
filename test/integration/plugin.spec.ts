@@ -6,7 +6,7 @@ import gql from "graphql-tag";
 let store: any;
 let vuexOrmGraphQL;
 
-describe("VuexORMGraphQL", () => {
+describe("Plugin GraphQL", () => {
   beforeEach(async () => {
     [store, vuexOrmGraphQL] = await setupMockData();
   });
@@ -996,7 +996,7 @@ query Status {
 
         const tariff = Tariff.query()
           .withAllRecursive()
-          .find(1)!;
+          .find("ED5F2379-6A8B-4E1D-A4E3-A2C03057C2FC")!;
         expect(tariff.name).toEqual("Super DSL S");
         expect(tariff.tariffOptions).not.toEqual(null);
         expect(tariff.tariffOptions.length).not.toEqual(0);
