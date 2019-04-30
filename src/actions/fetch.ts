@@ -35,7 +35,7 @@ export default class Fetch extends Action {
     // Filter
     const filter =
       params && params.filter
-        ? Transformer.transformOutgoingData(model, params.filter, Object.keys(params.filter))
+        ? Transformer.transformOutgoingData(model, params.filter, true, Object.keys(params.filter))
         : {};
 
     const bypassCache = params && params.bypassCache;
